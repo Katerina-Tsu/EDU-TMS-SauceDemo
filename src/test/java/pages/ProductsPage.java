@@ -8,7 +8,7 @@ public class ProductsPage extends BasePage{
         super(driver);
     }
 
-    public static final String ADD_PRODUCT_TO_CART_BUTTON = "//*[text() = '%s']/ancestor::*[@class='inventory_item']";
+    public static final String ADD_PRODUCT_TO_CART_BUTTON = "//*[text() = '%s']/ancestor::*[@class='inventory_item']//button";
 
     public void addProductToCart(String productName) {
         driver.findElement(By.xpath(String.format(ADD_PRODUCT_TO_CART_BUTTON, productName))).click();

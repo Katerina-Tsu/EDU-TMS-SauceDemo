@@ -11,6 +11,7 @@ public class ProductsTests extends BaseTest{
         //3.Add product to cart()
         productsPage.addProductToCart("Sauce Labs Fleece Jacket");
         //4.Open CartPage()
+        cartPage.openPage();
         //5.Assert quantity()
         //6.Assert price()
 
