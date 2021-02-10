@@ -3,7 +3,6 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import pages.LoginPage;
 import pages.ProductsPage;
@@ -13,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
-    ProductsTests productsPage;
+    ProductsPage productsPage;
 
     @BeforeMethod
     public void iniTTest() {
