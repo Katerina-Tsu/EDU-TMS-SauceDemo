@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ProductsTests extends BaseTest{
@@ -12,6 +13,8 @@ public class ProductsTests extends BaseTest{
         productsPage.addProductToCart("Sauce Labs Fleece Jacket");
         //4.Open CartPage()
         cartPage.openPage();
+        Assert.assertEquals(cartPage().getQuantity(), 1);
+        Assert.assertEquals(cartPage().getPrice(), "9.90");
         //5.Assert quantity()
         //6.Assert price()
 

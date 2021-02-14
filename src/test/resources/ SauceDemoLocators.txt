@@ -1,0 +1,33 @@
+By.id("user-name")
+By.id("password")
+By.id("login-button")
+By.id("page_wrapper")
+By.id("menu_button_container")
+By.id("inventory_sidebar_link")
+By.xpath("//*[@id="inventory_sidebar_link"]")
+By.id("about_sidebar_link")
+By.xpath("//*[@id="about_sidebar_link"]")
+By.id("logout_sidebar_link")
+By.xpath("//*[@id="logout_sidebar_link"]")
+By.id("reset_sidebar_link")
+By.xpath("//*[@id="reset_sidebar_link"]")
+By.xpath("//*[@id="inventory_filter_container"]/select")
+By.className("product_sort_container")
+By.cssSelector("#inventory_filter_container > select > option:nth-child(1)")
+By.cssSelector("#inventory_filter_container > select > option:nth-child(2)")
+By.cssSelector("#inventory_filter_container > select > option:nth-child(3)")
+By.cssSelector("#inventory_filter_container > select > option:nth-child(4)")
+or
+By.cssSelector("[value*=az]")
+By.cssSelector("[value*=za]")
+By.cssSelector("[value*=lohi]")
+By.cssSelector("[value*=hilo]")
+
+a[href*="inventory-item.html?id=4"]
+or
+[id*=item_4_img_link]
+or
+
+inventory_item_price
+btn_primary btn_inventory
+btn_secondary btn_inventory
