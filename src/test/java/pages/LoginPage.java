@@ -1,7 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static constants.ConstantsPages.*;
 
 public class LoginPage extends BasePage{
 
@@ -9,12 +10,11 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
-    public static final By USERNAME_INPUT = By.xpath("//*[@data-test='username']");
-    public static final By PASSWORD_INPUT = By.xpath("//*[@data-test='password']");
+    public final String URL = "https://www.saucedemo.com/index.html";
     public final String USERNAME = "standard_user";
     public final String PASSWORD = "secret_sauce";
-    public final String URL = "https://www.saucedemo.com/index.html";
-
+    public final String EMPTY_USERNAME = "";
+    public final String WRONG_USERNAME = "d_user";
 
     /**
      * Login to the site
@@ -24,8 +24,7 @@ public class LoginPage extends BasePage{
     public void login(String username, String password) {
         driver.findElement(USERNAME_INPUT).sendKeys(username);
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
-        driver.findElement(By.id("login-button")).click();
-
+        driver.findElement(LOGIN_BUTTON).click();
     }
 
     /**
@@ -34,5 +33,4 @@ public class LoginPage extends BasePage{
     public void openPage() {
         driver.get(URL);
     }
-
 }

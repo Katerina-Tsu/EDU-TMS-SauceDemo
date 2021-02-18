@@ -8,13 +8,14 @@ public class ProductsTests extends BaseTest{
     @Test
     public void addProductToCartTest() {
         loginPage.openPage();
-        loginPage.login(loginPage.USERNAME, loginPage.PASSWORD); //2.login page
-        //3.Add product to cart()
+        loginPage.login(loginPage.USERNAME, loginPage.PASSWORD);
         productsPage.addProductToCart("Sauce Labs Fleece Jacket");
-        //4.Open CartPage()
         cartPage.openPage();
-        Assert.assertEquals(cartPage().getQuantity(), 1);
-        Assert.assertEquals(cartPage().getPrice(), "9.90");
+        cartPage.calculateQuantity("Sauce Labs Fleece Jacket");
+        cartPage.getProductPrice("Sauce Labs Fleece Jacket");
+
+        Assert.assertEquals(cartPage.calculateQuantity("Sauce Labs Fleece Jacket"), "1");
+        Assert.assertEquals(cartPage.getProductPrice("Sauce Labs Fleece Jacket"), "49.99");
         //5.Assert quantity()
         //6.Assert price()
 
